@@ -32,13 +32,13 @@ def gigabytes_to_kilobytes(a):
 
 #MBs to Gigabytes
 def megabytes_to_gigabytes(a):
-    b = 0.0009765625
-    c = a * b
+    b = 1024
+    c = a / b
     return (a, float (c))
 #Gigabytes to MBs
 def gigabytes_to_megabytes(a):
-    b = 0.009765625
-    c = a / b
+    b = 1024
+    c = a * b
     return (a, float (c))
 
 
@@ -76,7 +76,7 @@ while loop:
         print("Please enter the Gigabytes you wish to convert to Megabytes.")
         gigabytes = check_input(input("Gigabytes: "))
         result = gigabytes_to_megabytes(gigabytes)
-        print('{} megabytes = gigabytes {}'.format(*result))
+        print('{} gigabytes = megabytes {}'.format(*result))
 
 
     if choice == 4:
@@ -85,19 +85,3 @@ while loop:
 print("\n")
 print ("-", 25)
 print ("Thanks for using Convert.py. I hope it has proven to be useful.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
