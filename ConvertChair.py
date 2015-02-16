@@ -64,25 +64,25 @@ while loop:
         choice = int(raw_input("Pick a conversion."))
 
     if choice == 1:
-        print("Please enter the kilobytes you wish to convert to Gigabytes.")
+        print"Please enter the kilobytes you wish to convert to Gigabytes."
         kilobytes = check_input(raw_input("Kilobytes: "))
         result = kilobytes_to_gigabytes(kilobytes)
         print('{} kilobytes = gigabytes {}'.format(*result))
 
     if choice == 2:
-        print("Please enter the Megabytes you wish to convert to Gigabytes.")
+        print"Please enter the Megabytes you wish to convert to Gigabytes."
         megabytes = check_input(raw_input("Megabytes: "))
         result = megabytes_to_gigabytes(megabytes)
         print('{} megabytes = gigabytes {}'.format(*result))
 
     if choice == 3:
-        print("Please enter the Gigabytes you wish to convert to Megabytes.")
+        print"Please enter the Gigabytes you wish to convert to Megabytes."
         gigabytes = check_input(raw_input("Gigabytes: "))
         result = gigabytes_to_megabytes(gigabytes)
         print('{} gigabytes = megabytes {}'.format(*result))
 
     if choice == 4:
-        print("Please enter the Gigabytes you wish to convert to kilobytes.")
+        print"Please enter the Gigabytes you wish to convert to kilobytes."
         gigabytes = check_input(raw_input("Gigabytes: "))
         result = gigabytes_to_kilobytes((gigabytes))
         print('{} gigabytes = kilobytes {}'.format(*result))
