@@ -1,4 +1,4 @@
-<h1>Convert</h1>
+<h1>Convert.py</h1>
 a simple to use, byte unit converter.
 
 <h3>How to install</h3>
@@ -16,3 +16,10 @@ Many Thanks to the following people.
 Burhan Khalid
 
 Betastate
+
+<h2>ConvertChair.py<h2>
+ConvertChair.py (codename'd Comfy Chair) is a Python compatible runtime of the Convert.Py script.
+
+It has it's own independent branch as we will be porting over the functionality from the main branch.
+
+To use this version simply download the Python 2 runtime then launch the Python app either via command line or via IDLE. If running in IDLE be sure to press F5 to run the module.
