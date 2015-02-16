@@ -16,3 +16,9 @@ Many Thanks to the following people.
 Burhan Khalid
 
 Betastate
+
+<h2> Comfy Chair </h2>
+**Looking for a Python 2 version?**
+The branch Comfy Chair has it's own Python 2 client.
+visit: https://github.com/OliPicard/convert.py/tree/comfy_chair
+and use the ConvertChair.py script instead of Convert.py
