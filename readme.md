@@ -1,4 +1,4 @@
-<h1>Convert</h1>
+<h1>Convert.py</h1>
 a simple to use, byte unit converter.
 
 <h3>How to install</h3>
