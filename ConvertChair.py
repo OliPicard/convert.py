@@ -43,6 +43,11 @@ def gigabytes_to_megabytes(a):
     b = 1024
     c = a * b
     return (a, float (c))
+#nibbles to bytes
+def nibbes_to_bytes(a):
+    b = 0.5
+    c = a * b
+    return (a, float (c))
 
 #conversion of a human brain into digital storage (estimate)
 def brain_to_petabytes(a):
