@@ -44,6 +44,12 @@ def gigabytes_to_megabytes(a):
     c = a * b
     return (a, float (c))
 
+#conversion of a human brain into digital storage (estimate)
+def brain_to_petabytes(a):
+    b = 2.5
+    c = a * b
+    return (a, float(c))
+
 
 #check the inputs!
 def check_input(user_input):
@@ -58,7 +64,7 @@ loop = True
 while loop:
     menu()
     choice = int(raw_input("Choose your option: "))
-    if choice not in [1,2,3,4,5]:
+    if choice not in [1,2,3,4,5,42]:
         print(choice, " is not a vaild input. please try again.")
         menu()
         choice = int(raw_input("Pick a conversion."))
@@ -84,11 +90,18 @@ while loop:
     if choice == 4:
         print"Please enter the Gigabytes you wish to convert to kilobytes."
         gigabytes = check_input(raw_input("Gigabytes: "))
-        result = gigabytes_to_kilobytes((gigabytes))
+        result = gigabytes_to_kilobytes(gigabytes)
         print('{} gigabytes = kilobytes {}'.format(*result))
 
     if choice == 5:
         loop = False
+
+    if choice == 42:
+        print"How many brains do you wish to convert to Petabytes?"
+        brain = check_input(raw_input("Brains:"))
+        result = brain_to_petabytes(brain)
+        if brain == 1:
+            print('{} brain = {} Petabytes'.format(*result))
 
 print"\n"
 print "-", 25
