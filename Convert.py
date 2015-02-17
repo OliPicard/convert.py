@@ -18,7 +18,9 @@ def menu():
     print("3. Gigabytes to MegaBytes\n")
     print("4. Gigabytes to Kilobytes\n")
     print("5. Nibbles to Bytes\n")
-    print ("6. Quit\n")
+    print("6. Terabytes to Petabytes\n")
+    print("7. Terabytes to Gigabytes\n")
+    print ("8. Quit\n")
     print ("-" * 25)
     print ("\n")
 
@@ -55,6 +57,16 @@ def nibbes_to_bytes(a):
     c = a * b
     return (a, float (c))
 
+def terabytes_to_petabytes(a):
+    b = 0.001
+    c = a * b
+    return (a, float(c))
+
+def terabytes_to_gigabytes(a):
+    b = 1000
+    c = a * b
+    return (a, int(c))
+
 #check the inputs!
 def check_input(user_input):
     try:
@@ -68,7 +80,7 @@ loop = True
 while loop:
     menu()
     choice = int(input("Choose your option: "))
-    if choice not in [1,2,3,4,5,6,42]:
+    if choice not in [1,2,3,4,5,6,7,8,42]:
         print(choice, " is not a vaild input. please try again.")
         menu()
         choice = int(input("Pick a conversion."))
@@ -104,6 +116,19 @@ while loop:
         print ('{} Nibbles = {} Bytes'.format(*result))
 
     if choice == 6:
+        print ("Please enter the Terabytes you wish to convert to Petabytes")
+        terabytes = check_input(input("Terabytes: "))
+        result = terabytes_to_petabytes(terabytes)
+        print ('{} Terabytes = {} Petabytes'.format(*result))
+
+    if choice == 7:
+        print("Please enter the Terabytes you wish to convert to Gigabytes.")
+        terabytes = check_input(input("Terabytes:"))
+        result = terabytes_to_gigabytes(terabytes)
+        print('{} Terabytes = {} Gigabytes'.format(*result))
+
+
+    if choice == 8:
         loop = False
 
     if choice == 42:
