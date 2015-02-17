@@ -17,7 +17,8 @@ def menu():
     print("2. MegaBytes to Gigabytes\n")
     print("3. Gigabytes to MegaBytes\n")
     print("4. Gigabytes to Kilobytes\n")
-    print ("5. Quit\n")
+    print("5. Nibbles to Bytes\n")
+    print ("6. Quit\n")
     print ("-" * 25)
     print ("\n")
 
@@ -49,6 +50,11 @@ def brain_to_petabytes(a):
     c = a * b
     return (a, float(c))
 
+def nibbes_to_bytes(a):
+    b = 0.5
+    c = a * b
+    return (a, float (c))
+
 #check the inputs!
 def check_input(user_input):
     try:
@@ -62,7 +68,7 @@ loop = True
 while loop:
     menu()
     choice = int(input("Choose your option: "))
-    if choice not in [1,2,3,4,5,42]:
+    if choice not in [1,2,3,4,5,6,42]:
         print(choice, " is not a vaild input. please try again.")
         menu()
         choice = int(input("Pick a conversion."))
@@ -92,6 +98,12 @@ while loop:
         print('{} gigabytes = kilobytes {}'.format(*result))
 
     if choice == 5:
+        print("Please enter the Nibbles you wish to convert to Bytes.")
+        nibbles = check_input(input("Nibbles: "))
+        result = nibbes_to_bytes(nibbles)
+        print ('{} Nibbles = {} Bytes'.format(*result))
+
+    if choice == 6:
         loop = False
 
     if choice == 42:
